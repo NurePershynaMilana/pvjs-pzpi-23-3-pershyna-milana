@@ -1,0 +1,63 @@
+// Backgrounds
+$c-bg-deep: #07041a;
+$c-bg: #0d0721;
+$c-surface: #1a1135;
+$c-surface-hover: #221947;
+$c-surface-elevated: #251a52;
+
+// Text
+$c-text: #f1edff;
+$c-text-muted: #a8a2c4;
+$c-text-faint: #6b6688;
+
+// Borders
+$c-border: rgba(255, 255, 255, 0.08);
+$c-border-strong: rgba(255, 255, 255, 0.16);
+
+// Accent (purple)
+$c-accent: #8b80ff;
+$c-accent-hover: #a59bff;
+$c-accent-deep: #6c63ff;
+$c-accent-pale: rgba(139, 128, 255, 0.16);
+
+// Star (favorite)
+$c-star: #facc15;
+$c-star-hover: #fbbf24;
+$c-star-pale: rgba(250, 204, 21, 0.16);
+
+// Danger
+$c-danger: #f87171;
+$c-danger-pale: rgba(248, 113, 113, 0.1);
+$c-danger-light: rgba(248, 113, 113, 0.32);
+
+// Gradients
+$grad-bg:
+  radial-gradient(ellipse 70% 55% at 50% -10%, rgba(124, 58, 237, 0.45), transparent 60%),
+  radial-gradient(ellipse 50% 40% at 90% 20%, rgba(236, 72, 153, 0.18), transparent 65%),
+  radial-gradient(ellipse 60% 45% at 10% 60%, rgba(99, 102, 241, 0.18), transparent 60%),
+  linear-gradient(180deg, $c-bg 0%, $c-bg-deep 100%);
+
+$grad-title: linear-gradient(135deg, #c4b5fd 0%, #f9a8d4 100%);
+$grad-accent: linear-gradient(135deg, $c-accent-deep 0%, $c-accent 100%);
+
+// Shadows
+$shadow-card: 0 4px 16px rgba(0, 0, 0, 0.35);
+$shadow-card-hover: 0 16px 40px rgba(108, 99, 255, 0.32);
+$shadow-btn: 0 4px 14px rgba(108, 99, 255, 0.5);
+$shadow-thumb: 0 4px 14px rgba(108, 99, 255, 0.55);
+$focus-ring: 0 0 0 3px rgba(139, 128, 255, 0.35);
+
+// Radii
+$r-sm: 6px;
+$r-md: 10px;
+$r-lg: 12px;
+$r-xl: 16px;
+$r-pill: 999px;
+
+// Transition
+$t: all 0.3s ease;
+$t-easing: cubic-bezier(0.4, 0, 0.2, 1);
+
+// Layout
+$container-max: 1200px;
+$gap: 20px;

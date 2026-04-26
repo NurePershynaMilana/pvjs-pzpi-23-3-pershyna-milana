@@ -1,0 +1,134 @@
+@use '../../styles/variables' as *;
+
+.search-bar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+
+  &__input-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 240px;
+  }
+
+  &__icon {
+    position: absolute;
+    left: 14px;
+    width: 18px;
+    height: 18px;
+    color: $c-text-muted;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 12px 40px 12px 42px;
+    border: 1px solid $c-border;
+    border-radius: $r-lg;
+    font-size: 0.9rem;
+    outline: none;
+    background: rgba(255, 255, 255, 0.04);
+    color: $c-text;
+    transition: $t;
+    backdrop-filter: blur(8px);
+
+    &:focus {
+      border-color: $c-accent;
+      box-shadow: $focus-ring;
+      background: rgba(255, 255, 255, 0.06);
+    }
+
+    &::placeholder {
+      color: $c-text-faint;
+    }
+  }
+
+  &__clear {
+    position: absolute;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    color: $c-text-faint;
+    cursor: pointer;
+    transition: $t;
+    padding: 0;
+    border-radius: 50%;
+
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    &:hover {
+      color: $c-text;
+      background: rgba(255, 255, 255, 0.08);
+    }
+  }
+
+  // Sliding pill toggle
+  &__toggle {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: rgba(0, 0, 0, 0.32);
+    border: 1px solid $c-border;
+    border-radius: $r-pill;
+    padding: 4px;
+    backdrop-filter: blur(8px);
+  }
+
+  &__toggle-thumb {
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: 4px;
+    width: calc(50% - 4px);
+    background: $grad-accent;
+    border-radius: $r-pill;
+    box-shadow: $shadow-thumb;
+    transition: transform 0.3s $t-easing;
+    z-index: 0;
+  }
+
+  &__toggle--shifted &__toggle-thumb {
+    transform: translateX(100%);
+  }
+
+  &__toggle-btn {
+    position: relative;
+    z-index: 1;
+    padding: 9px 26px;
+    min-width: 96px;
+    border: none;
+    background: transparent;
+    color: $c-text-muted;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: $r-pill;
+    transition: color 0.3s ease;
+
+    &:hover:not(&--active) {
+      color: $c-text;
+    }
+
+    &--active {
+      color: #fff;
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: $focus-ring;
+    }
+  }
+}

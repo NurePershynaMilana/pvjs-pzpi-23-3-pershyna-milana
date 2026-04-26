@@ -1,0 +1,48 @@
+@use './styles/variables' as *;
+
+:root {
+  font-family: system-ui, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: $c-text;
+  -webkit-font-smoothing: antialiased;
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+body {
+  color: $c-text;
+  background: $c-bg-deep;
+  background-image: $grad-bg;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+}
+
+input {
+  font-family: inherit;
+  color-scheme: dark;
+}
+
+::selection {
+  background: $c-accent;
+  color: #fff;
+}

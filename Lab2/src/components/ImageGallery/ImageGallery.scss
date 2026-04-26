@@ -1,0 +1,27 @@
+@use '../../styles/variables' as *;
+
+.image-gallery {
+  &__empty {
+    text-align: center;
+    color: $c-text-muted;
+    font-size: 1rem;
+    padding: 60px 20px;
+    margin: 0;
+  }
+
+  &__sentinel {
+    width: 100%;
+    height: 1px;
+  }
+
+  &__end {
+    text-align: center;
+    color: $c-text-faint;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 32px 20px 16px;
+    margin: 0;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,63 @@
+@use '../../styles/variables' as *;
+
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 48px 24px;
+  background: $c-danger-pale;
+  border: 1px solid $c-danger-light;
+  border-radius: $r-xl;
+  text-align: center;
+  max-width: 480px;
+  margin: 32px auto;
+  backdrop-filter: blur(8px);
+
+  &__icon {
+    width: 44px;
+    height: 44px;
+    color: $c-danger;
+  }
+
+  &__title {
+    margin: 0;
+    color: $c-danger;
+    font-size: 1.15rem;
+    font-weight: 700;
+  }
+
+  &__text {
+    margin: 0;
+    color: $c-text-muted;
+    font-size: 0.95rem;
+  }
+
+  &__retry {
+    margin-top: 8px;
+    padding: 10px 24px;
+    border: none;
+    border-radius: $r-pill;
+    background: $grad-accent;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: $t;
+    box-shadow: $shadow-btn;
+
+    &:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.1);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: $focus-ring;
+    }
+  }
+}

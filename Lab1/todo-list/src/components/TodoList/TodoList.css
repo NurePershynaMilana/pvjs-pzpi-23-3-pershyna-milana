@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+.todo-wrapper {
+  font-family: 'Nunito', sans-serif;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 36px 32px;
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.04),
+    0 10px 40px rgba(108, 99, 255, 0.1);
+}
+
+/* Заголовок */
+.todo-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-bottom: 24px;
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.todo-title::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 32px;
+  background: linear-gradient(180deg, #6c63ff, #a78bfa);
+  border-radius: 4px;
+}
+
+/* Поле вводу */
+.input-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.input-row input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid #ede9fe;
+  border-radius: 12px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.95rem;
+  color: #1a1a2e;
+  background: #fafafa;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-row input::placeholder {
+  color: #c4b5fd;
+}
+
+.input-row input:focus {
+  border-color: #6c63ff;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(108, 99, 255, 0.1);
+}
+
+.btn-add {
+  padding: 12px 22px;
+  background: linear-gradient(135deg, #6c63ff, #a78bfa);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  white-space: nowrap;
+}
+
+.btn-add:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(108, 99, 255, 0.35);
+}
+
+.btn-add:active {
+  transform: translateY(0);
+}
+
+/* Фільтри */
+.filters {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 24px;
+  background: #f5f3ff;
+  border-radius: 12px;
+  padding: 4px;
+}
+
+.filters button {
+  flex: 1;
+  padding: 8px 0;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #7c6fcd;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.filters button.active {
+  background: #ffffff;
+  color: #6c63ff;
+  box-shadow: 0 2px 8px rgba(108, 99, 255, 0.15);
+}
+
+/* Список */
+.todo-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Порожній стан */
+.empty {
+  text-align: center;
+  color: #c4b5fd;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 32px 0 8px;
+}
+
+/* Лічильник */
+.todo-counter {
+  text-align: right;
+  font-size: 0.8rem;
+  color: #c4b5fd;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
