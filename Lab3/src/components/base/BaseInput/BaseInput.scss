@@ -1,0 +1,24 @@
+@use '@/assets/styles/abstracts/variables' as *;
+@use '@/assets/styles/abstracts/mixins' as *;
+
+.base-input {
+  @include flex-col($space-xs);
+
+  &__label {
+    font-size: $fs-sm;
+    color: $text-secondary;
+  }
+
+  &__field {
+    @include input-base;
+
+    &--error {
+      border-color: $color-danger;
+    }
+  }
+
+  &__error {
+    color: $color-danger;
+    font-size: $fs-sm;
+  }
+}

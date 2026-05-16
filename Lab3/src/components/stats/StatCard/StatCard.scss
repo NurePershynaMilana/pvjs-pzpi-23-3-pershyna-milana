@@ -1,0 +1,38 @@
+@use '@/assets/styles/abstracts/variables' as *;
+@use '@/assets/styles/abstracts/mixins' as *;
+
+.stat-card {
+  @include flex-col($space-xs);
+  padding: $space-md $space-lg;
+  background: $bg-secondary;
+  border: 1px solid $border-subtle;
+  border-radius: $radius-lg;
+  min-width: 0;
+
+  &__value {
+    font-size: $fs-2xl;
+    font-weight: $fw-bold;
+    line-height: 1;
+  }
+
+  &__label {
+    font-size: $fs-sm;
+    color: $text-secondary;
+  }
+
+  &--default &__value {
+    color: $text-primary;
+  }
+
+  &--info &__value {
+    color: $accent;
+  }
+
+  &--success &__value {
+    color: $color-success;
+  }
+
+  &--danger &__value {
+    color: $color-danger;
+  }
+}

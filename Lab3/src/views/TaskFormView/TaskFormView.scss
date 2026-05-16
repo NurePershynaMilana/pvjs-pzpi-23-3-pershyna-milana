@@ -1,0 +1,43 @@
+@use '@/assets/styles/abstracts/variables' as *;
+@use '@/assets/styles/abstracts/mixins' as *;
+
+.task-form {
+  @include flex-col($space-md);
+
+  &__back {
+    @include button-reset;
+    color: $accent;
+    font-size: $fs-sm;
+    align-self: flex-start;
+
+    &:hover {
+      color: $accent-hover;
+    }
+  }
+
+  &__title {
+    margin-bottom: $space-sm;
+  }
+
+  &__form {
+    @include card;
+    @include flex-col($space-md);
+    padding: $space-lg;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $space-md;
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__actions {
+    @include flex-row($space-sm);
+    justify-content: flex-end;
+    margin-top: $space-sm;
+  }
+}

@@ -1,0 +1,12 @@
+@use '@/assets/styles/abstracts/variables' as *;
+
+.task-filters {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr auto;
+  gap: $space-sm;
+  margin-bottom: $space-lg;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}

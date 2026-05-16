@@ -1,0 +1,40 @@
+@use '@/assets/styles/abstracts/variables' as *;
+@use '@/assets/styles/abstracts/mixins' as *;
+
+.app-nav {
+  background: $bg-secondary;
+  border-bottom: 1px solid $border-subtle;
+  height: $nav-height;
+
+  &__inner {
+    @include flex-between;
+    height: 100%;
+  }
+
+  &__brand {
+    font-size: $fs-md;
+    font-weight: $fw-semibold;
+  }
+
+  &__links {
+    display: flex;
+    gap: $space-lg;
+  }
+
+  &__link {
+    color: $text-secondary;
+    font-size: $fs-base;
+    padding: $space-xs 0;
+    border-bottom: 2px solid transparent;
+    transition: color $transition-fast, border-color $transition-fast;
+
+    &:hover {
+      color: $text-primary;
+    }
+
+    &.router-link-exact-active {
+      color: $accent;
+      border-bottom-color: $accent;
+    }
+  }
+}

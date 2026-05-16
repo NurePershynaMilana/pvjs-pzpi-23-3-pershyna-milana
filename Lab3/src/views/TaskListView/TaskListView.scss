@@ -1,0 +1,8 @@
+@use '@/assets/styles/abstracts/variables' as *;
+@use '@/assets/styles/abstracts/mixins' as *;
+
+.task-list {
+  &__items {
+    @include flex-col($space-sm);
+  }
+}

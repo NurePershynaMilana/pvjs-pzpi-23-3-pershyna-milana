@@ -1,0 +1,16 @@
+@use '@/assets/styles/abstracts/variables' as *;
+@use '@/assets/styles/abstracts/mixins' as *;
+
+.empty-state {
+  @include flex-col($space-md);
+  align-items: center;
+  padding: $space-2xl $space-md;
+  background: $bg-secondary;
+  border: 1px dashed $border-default;
+  border-radius: $radius-lg;
+
+  &__message {
+    color: $text-muted;
+    text-align: center;
+  }
+}

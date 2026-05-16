@@ -1,0 +1,21 @@
+@use '@/assets/styles/abstracts/variables' as *;
+@use '@/assets/styles/abstracts/mixins' as *;
+
+.not-found {
+  @include flex-col($space-md);
+  align-items: center;
+  padding: $space-2xl 0;
+
+  &__code {
+    font-size: 96px;
+    font-weight: $fw-bold;
+    color: $accent;
+    line-height: 1;
+  }
+
+  &__message {
+    font-size: $fs-lg;
+    color: $text-secondary;
+    margin-bottom: $space-md;
+  }
+}

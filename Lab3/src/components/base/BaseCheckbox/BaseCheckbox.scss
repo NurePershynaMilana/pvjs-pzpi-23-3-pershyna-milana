@@ -1,0 +1,39 @@
+@use '@/assets/styles/abstracts/variables' as *;
+
+.base-checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-sm;
+  cursor: pointer;
+  user-select: none;
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &__box {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid $border-default;
+    background: transparent;
+    transition: background $transition-fast, border-color $transition-fast;
+    flex-shrink: 0;
+
+    &--checked {
+      background: $color-success;
+      border-color: $color-success;
+    }
+  }
+
+  &__label {
+    color: $text-primary;
+    font-size: $fs-base;
+  }
+
+  &__input:focus-visible + &__box {
+    box-shadow: 0 0 0 2px $accent-soft;
+  }
+}

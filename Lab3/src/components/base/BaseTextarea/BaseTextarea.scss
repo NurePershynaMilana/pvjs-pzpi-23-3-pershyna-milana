@@ -1,0 +1,26 @@
+@use '@/assets/styles/abstracts/variables' as *;
+@use '@/assets/styles/abstracts/mixins' as *;
+
+.base-textarea {
+  @include flex-col($space-xs);
+
+  &__label {
+    font-size: $fs-sm;
+    color: $text-secondary;
+  }
+
+  &__field {
+    @include input-base;
+    resize: vertical;
+    min-height: 80px;
+
+    &--error {
+      border-color: $color-danger;
+    }
+  }
+
+  &__error {
+    color: $color-danger;
+    font-size: $fs-sm;
+  }
+}

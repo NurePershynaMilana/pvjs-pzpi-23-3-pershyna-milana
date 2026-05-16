@@ -1,0 +1,72 @@
+@use '@/assets/styles/abstracts/variables' as *;
+@use '@/assets/styles/abstracts/mixins' as *;
+
+.base-button {
+  @include button-reset;
+  @include flex-center;
+  @include focus-ring;
+  gap: $space-xs;
+  border-radius: $radius-md;
+  font-weight: $fw-medium;
+  transition: background $transition-fast, color $transition-fast,
+    border-color $transition-fast;
+  white-space: nowrap;
+
+  &--md {
+    padding: $space-sm $space-md;
+    font-size: $fs-base;
+  }
+
+  &--sm {
+    padding: 6px $space-sm;
+    font-size: $fs-sm;
+  }
+
+  &--primary {
+    background: $accent-soft;
+    color: $accent;
+    border: 1px solid transparent;
+
+    &:hover:not(:disabled) {
+      background: $accent;
+      color: $bg-primary;
+    }
+  }
+
+  &--secondary {
+    background: $bg-elevated;
+    color: $text-primary;
+    border: 1px solid $border-default;
+
+    &:hover:not(:disabled) {
+      background: $border-default;
+    }
+  }
+
+  &--danger {
+    background: $color-danger-soft;
+    color: $color-danger;
+    border: 1px solid transparent;
+
+    &:hover:not(:disabled) {
+      background: $color-danger;
+      color: #fff;
+    }
+  }
+
+  &--ghost {
+    background: transparent;
+    color: $text-secondary;
+    border: 1px solid $border-default;
+
+    &:hover:not(:disabled) {
+      background: $bg-elevated;
+      color: $text-primary;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}

@@ -1,0 +1,25 @@
+@use '@/assets/styles/abstracts/variables' as *;
+
+.priority-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px $space-sm;
+  font-size: $fs-xs;
+  font-weight: $fw-medium;
+  border-radius: $radius-pill;
+
+  &--high {
+    background: rgba(239, 68, 68, 0.2);
+    color: $priority-high;
+  }
+
+  &--medium {
+    background: rgba(245, 158, 11, 0.2);
+    color: $priority-medium;
+  }
+
+  &--low {
+    background: rgba(20, 184, 166, 0.2);
+    color: $priority-low;
+  }
+}

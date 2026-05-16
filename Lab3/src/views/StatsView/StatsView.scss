@@ -1,0 +1,54 @@
+@use '@/assets/styles/abstracts/variables' as *;
+@use '@/assets/styles/abstracts/mixins' as *;
+
+.stats {
+  @include flex-col($space-lg);
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $space-sm;
+
+    @media (max-width: 720px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__section {
+    @include card;
+    padding: $space-lg;
+    @include flex-col($space-md);
+  }
+
+  &__heading {
+    font-size: $fs-md;
+    font-weight: $fw-medium;
+  }
+
+  &__list {
+    @include flex-col($space-xs);
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: $space-md;
+    padding: $space-sm $space-md;
+    background: $bg-elevated;
+    border-radius: $radius-md;
+
+    &-title {
+      color: $text-primary;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &-date {
+      color: $accent;
+      font-size: $fs-sm;
+      font-weight: $fw-medium;
+    }
+  }
+}

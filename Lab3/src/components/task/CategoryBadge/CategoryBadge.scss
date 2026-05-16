@@ -1,0 +1,23 @@
+@use '@/assets/styles/abstracts/variables' as *;
+
+.category-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px $space-sm;
+  font-size: $fs-xs;
+  font-weight: $fw-medium;
+  border-radius: $radius-pill;
+  color: #fff;
+
+  &--work {
+    background: $category-work;
+  }
+
+  &--study {
+    background: $category-study;
+  }
+
+  &--personal {
+    background: $category-personal;
+  }
+}

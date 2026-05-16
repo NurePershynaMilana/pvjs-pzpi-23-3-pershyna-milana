@@ -1,0 +1,11 @@
+@use '@/assets/styles/abstracts/variables' as *;
+
+.deadline-label {
+  font-size: $fs-sm;
+  color: $text-muted;
+
+  &--overdue {
+    color: $color-danger;
+    font-weight: $fw-medium;
+  }
+}

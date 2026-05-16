@@ -1,0 +1,79 @@
+@use '@/assets/styles/abstracts/variables' as *;
+@use '@/assets/styles/abstracts/mixins' as *;
+
+.task-detail {
+  @include flex-col($space-md);
+
+  &__back {
+    @include button-reset;
+    color: $accent;
+    font-size: $fs-sm;
+    align-self: flex-start;
+
+    &:hover {
+      color: $accent-hover;
+    }
+  }
+
+  &__title {
+    font-size: $fs-xl;
+    margin-bottom: 0;
+  }
+
+  &__badges {
+    @include flex-row($space-sm);
+    flex-wrap: wrap;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $space-sm;
+
+    @media (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__field {
+    @include card;
+    @include flex-col($space-xs);
+
+    &--full {
+      grid-column: 1 / -1;
+    }
+  }
+
+  &__label {
+    font-size: $fs-sm;
+    color: $text-secondary;
+  }
+
+  &__value {
+    font-size: $fs-md;
+    font-weight: $fw-medium;
+    color: $text-primary;
+
+    &--danger {
+      color: $color-danger;
+    }
+  }
+
+  &__description {
+    color: $text-primary;
+    white-space: pre-wrap;
+    line-height: 1.6;
+  }
+
+  &__actions {
+    @include flex-row($space-sm);
+    margin-top: $space-sm;
+  }
+
+  &__missing {
+    @include card;
+    @include flex-col($space-md);
+    align-items: flex-start;
+    padding: $space-xl;
+  }
+}
