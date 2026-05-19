@@ -1,0 +1,35 @@
+@use '@/assets/styles/variables' as *;
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+  padding: $spacing-xl;
+  background-color: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+  }
+
+  &__title {
+    font-family: $font-family-display;
+    font-size: $font-size-2xl;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  &__subtitle {
+    color: $color-text-secondary;
+    font-size: $font-size-sm;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+  }
+}

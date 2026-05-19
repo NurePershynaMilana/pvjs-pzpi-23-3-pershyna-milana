@@ -1,0 +1,39 @@
+@use '@/assets/styles/variables' as *;
+
+.base-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  font-size: $font-size-xs;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  color: $color-text-primary;
+  background-color: $color-surface-elevated;
+  border: 1px solid $color-border-strong;
+
+  &--meetup {
+    background-color: rgba(167, 139, 250, 0.18);
+    color: #c4b5fd;
+    border-color: rgba(167, 139, 250, 0.35);
+  }
+
+  &--conference {
+    background-color: rgba(16, 185, 129, 0.18);
+    color: #6ee7b7;
+    border-color: rgba(16, 185, 129, 0.35);
+  }
+
+  &--hackathon {
+    background-color: rgba(245, 158, 11, 0.18);
+    color: #fcd34d;
+    border-color: rgba(245, 158, 11, 0.35);
+  }
+
+  &--workshop {
+    background-color: rgba(236, 72, 153, 0.18);
+    color: #f9a8d4;
+    border-color: rgba(236, 72, 153, 0.35);
+  }
+}

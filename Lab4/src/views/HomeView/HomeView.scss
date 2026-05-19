@@ -1,0 +1,29 @@
+@use '@/assets/styles/variables' as *;
+@use '@/assets/styles/mixins' as *;
+
+.home-view {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xl;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+    max-width: 720px;
+  }
+
+  &__title {
+    font-family: $font-family-display;
+    font-size: $font-size-3xl;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  &__lead {
+    color: $color-text-secondary;
+    font-size: $font-size-lg;
+    line-height: 1.5;
+  }
+}

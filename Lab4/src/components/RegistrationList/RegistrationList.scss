@@ -1,0 +1,85 @@
+@use '@/assets/styles/variables' as *;
+@use '@/assets/styles/mixins' as *;
+
+.registration-list {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+
+  &__title {
+    font-size: $font-size-xs;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: $color-text-muted;
+  }
+
+  &__empty {
+    padding: $spacing-lg;
+    text-align: center;
+    color: $color-text-secondary;
+    font-size: $font-size-sm;
+    background-color: $color-surface;
+    border: 1px dashed $color-border-strong;
+    border-radius: $radius-md;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $spacing-md;
+    padding: $spacing-md $spacing-lg;
+    background-color: $color-surface;
+    border: 1px solid $color-border;
+    border-radius: $radius-md;
+    transition:
+      background-color $transition-fast,
+      opacity $transition-fast;
+
+    &--pending {
+      opacity: 0.6;
+      border-style: dashed;
+    }
+  }
+
+  &__person {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+  }
+
+  &__name {
+    font-weight: 600;
+    color: $color-text-primary;
+    display: inline-flex;
+    align-items: center;
+    gap: $spacing-xs;
+  }
+
+  &__pending-mark {
+    font-size: $font-size-sm;
+    color: $color-warning;
+    letter-spacing: 0.1em;
+  }
+
+  &__email {
+    font-size: $font-size-sm;
+    color: $color-text-secondary;
+    @include truncate(1);
+  }
+
+  &__date {
+    font-size: $font-size-xs;
+    color: $color-text-muted;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+}

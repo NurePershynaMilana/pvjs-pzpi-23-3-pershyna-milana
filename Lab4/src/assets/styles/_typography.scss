@@ -1,0 +1,35 @@
+@use 'variables' as *;
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: 400;
+  color: $color-text-primary;
+  background-color: $color-bg;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-family-display;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-weight: 800;
+}
+
+.text-display {
+  font-family: $font-family-display;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.text-muted {
+  color: $color-text-muted;
+}
+
+.text-secondary {
+  color: $color-text-secondary;
+}

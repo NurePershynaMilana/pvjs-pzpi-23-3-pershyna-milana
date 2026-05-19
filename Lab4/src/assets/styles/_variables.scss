@@ -1,0 +1,65 @@
+$color-bg:                #0a0a0f;
+$color-surface:           #14141b;
+$color-surface-elevated:  #1c1c25;
+$color-surface-hover:     #23232e;
+
+$color-primary:           #8b5cf6;
+$color-primary-hover:     #a78bfa;
+$color-primary-dark:      #6d28d9;
+
+$color-accent:            #d4a574;
+$color-accent-hover:      #e0b890;
+
+$color-text-primary:      #ffffff;
+$color-text-secondary:    #a1a1aa;
+$color-text-muted:        #71717a;
+
+$color-border:            rgba(255, 255, 255, 0.08);
+$color-border-strong:     rgba(255, 255, 255, 0.16);
+
+$color-success:           #10b981;
+$color-error:             #ef4444;
+$color-warning:           #f59e0b;
+
+$gradient-meetup:         linear-gradient(135deg, #a78bfa 0%, #7c3aed 100%);
+$gradient-conference:     linear-gradient(135deg, #10b981 0%, #047857 100%);
+$gradient-hackathon:      linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
+$gradient-workshop:       linear-gradient(135deg, #ec4899 0%, #be185d 100%);
+
+$font-family-base:        'Inter', system-ui, -apple-system, sans-serif;
+$font-family-display:     'Geist', 'Inter', system-ui, sans-serif;
+
+$font-size-xs:            0.75rem;
+$font-size-sm:            0.875rem;
+$font-size-base:          1rem;
+$font-size-lg:            1.125rem;
+$font-size-xl:            1.5rem;
+$font-size-2xl:           2rem;
+$font-size-3xl:           2.5rem;
+
+$radius-sm:               6px;
+$radius-md:               10px;
+$radius-lg:               16px;
+$radius-xl:               24px;
+
+$spacing-xs:              0.5rem;
+$spacing-sm:              0.75rem;
+$spacing-md:              1rem;
+$spacing-lg:              1.5rem;
+$spacing-xl:              2rem;
+$spacing-2xl:             3rem;
+
+$shadow-sm:               0 2px 8px rgba(0, 0, 0, 0.3);
+$shadow-md:               0 8px 24px rgba(0, 0, 0, 0.4);
+$shadow-lg:               0 16px 48px rgba(0, 0, 0, 0.5);
+
+$breakpoint-sm:           640px;
+$breakpoint-md:           768px;
+$breakpoint-lg:           1024px;
+$breakpoint-xl:           1280px;
+
+$transition-fast:         150ms ease;
+$transition-base:         250ms ease;
+$transition-slow:         400ms ease;
+
+$container-max-width:     1200px;
